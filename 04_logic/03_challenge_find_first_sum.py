@@ -25,13 +25,13 @@ def find_first_sum(nums, goal):
    seen = {} # diccionario para guardar el numero y su índice
 
    for index, value in enumerate(nums):
-      missing = goal - value
-      if missing in seen: return [seen[missing], index]
+      num_faltante = goal - value
+      if num_faltante in seen: return [seen[num_faltante], index]
       seen[value] = index # guardar el número actual a los vistos, porque no hemos encontrado la combinación
       print(f"index: {index} value: {value}")
 
    return None
-
+   
 nums = [4, 5, 6, 2]
 goal = 8
 
