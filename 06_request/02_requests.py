@@ -92,10 +92,14 @@ except requests.exceptions.RequestException as e:
 # Usar la API de GPT-4o de OpenAI
 # Ref: https://platform.openai.com/docs/api-reference/making-requests
 
+import os
 import json
 import requests
 
-OPENAI_KEY = "REDACTED_OPENAI_KEY"
+# ...existing code...
+
+# Reemplazado: no dejar la clave en claro en el repositorio
+OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
 
 def call_openai_gpt(api_key, prompt):
   url = "https://api.openai.com/v1/chat/completions"
