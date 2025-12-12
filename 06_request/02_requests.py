@@ -8,15 +8,15 @@ import json
 api_posts = "https://jsonplaceholder.typicode.com/posts/"
 
 try:
-    response = urllib.request.urlopen(api_posts)
-    data = response.read()
-    json_data = json.loads(data.decode("utf-8"))
-    print(json_data)
-    response.close()
+    response = urllib.request.urlopen(api_posts) # Haciendo la petición GET
+    data = response.read() # Lee el contenido de la respuesta
+    json_data = json.loads(data.decode("utf-8")) # Convierte la respuesta en JSON
+    print(json_data) # Imprime la respuesta en formato JSON
+    response.close() # Cierra la conexión
 except urllib.error.URLError as e:
     print(f"Error al hacer la petición: {e}")   
 
-# 2. Con dependencia (requests)
+# 2. Con dependencia = (requests)
 
 import requests
 
