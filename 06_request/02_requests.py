@@ -100,6 +100,8 @@ import requests
 
 # Reemplazado: no dejar la clave en claro en el repositorio
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY")
+if not OPENAI_KEY:
+    raise RuntimeError("Define OPENAI_API_KEY como variable de entorno antes de ejecutar.")
 
 def call_openai_gpt(api_key, prompt):
   url = "https://api.openai.com/v1/chat/completions"
