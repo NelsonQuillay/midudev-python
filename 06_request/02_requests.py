@@ -4,8 +4,8 @@
 # 1. Sin dependencias (díficil y sin dependencias)
 import urllib.request
 import json
+from decouple import config 
 
-#DEEPSEEK_API_KEY = "xxx"
 
 api_posts = "https://jsonplaceholder.typicode.com/posts/"
 
@@ -59,7 +59,8 @@ except requests.exceptions.RequestException as e:
 # Usar la API de GPT-4o de OpenAI
 # Ref: https://platform.openai.com/docs/api-reference/making-requests
 
-#OPENAI_KEY = "sk-XXXXXXXX"
+OPENAI_KEY = config("OPENAI_KEY")
+DEEPSEEK_API_KEY = config("DEEPSEEK_API_KEY")
 
 import json
 
