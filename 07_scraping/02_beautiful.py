@@ -1,7 +1,13 @@
+# pip install bs4 => beautifulsoup4 -> instalas la dependencia para parsear HTML
+
 from bs4 import BeautifulSoup
 import requests
 
 url = 'https://www.apple.com/es/shop/buy-mac/macbook-air/'
+
+headers = {
+  'User-Agent': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/131.0.0 Safari/537.36'
+}
 
 response = requests.get(url)
 

@@ -1,4 +1,5 @@
-# pip3 install requests -> instalas la dependencia para hacer peticiones
+# pip install requests -> instalas la dependencia para hacer peticiones
+
 
 import requests
 import re
